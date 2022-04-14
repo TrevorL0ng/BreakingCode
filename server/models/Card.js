@@ -1,5 +1,8 @@
 const { Schema, model } = require('mongoose');
+
+// Do we need? 
 const bcrypt = require('bcrypt');
+
 
 const cardSchema = new Schema(
     {
@@ -34,5 +37,6 @@ const cardSchema = new Schema(
     }
 );
 
+// Model
 const Cards = model("Card", cardSchema);
 module.exports = Cards;

@@ -1,7 +1,9 @@
 import React from 'react';
+
 function About() {
 
     return (
+        
         <section class="hero">
             <div class="about-container">
                 {/* about section */}

@@ -9,7 +9,6 @@ const typeDefs = gql`
     stat: String
     topic: String
   }
-
     type Query {
         cards: Card
         class(id: ID!): Card

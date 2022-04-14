@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 
 function Header() {
@@ -12,17 +12,16 @@ function Header() {
     return (
         <header className="header">
             <div>
-                {/* <Link to="/"> */}
+                <nav className="text-center">
+                <Link to="/">
                     <img className="logo"
                         src="https://fontmeme.com/permalink/220410/ac11cb84f10a947099bf1c1c6ce07dcb.png"
                         alt="BreakingCode-logo"
                     />
-                {/* </Link> */}
-                {/* <nav>
+                </Link>
                     {Auth.loggedIn() ? (
                         <>
-                            <Link to="/game">Game</Link>
-                            <Link to="/scoreboard">Scoreboard</Link>
+                            <Link to="/game">Me</Link>
                             <a href="/" onClick={logout}>
                                 Logout
                             </a>
@@ -33,7 +32,7 @@ function Header() {
                             <Link to="/signup">Signup</Link>
                         </>
                     )}
-                </nav> */}
+                </nav>
             </div>
         </header>
     );
