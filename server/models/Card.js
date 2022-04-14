@@ -9,7 +9,8 @@ const cardSchema = new Schema(
         uid: {
             type: Number,
             required: true,
-            unique: true
+            unique: true,
+            index: true
         },
         pair_id: {
             type: Number,
