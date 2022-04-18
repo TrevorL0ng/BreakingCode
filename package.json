@@ -1,0 +1,31 @@
+{
+    "name": "breakingCode",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "proxy": "http://localhost:3001",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server/server.js",
+        "client": "cd client && npm start",
+        "dev": "concurrently -n 'client,server' -c 'blue,yellow' \"npm run client\" \"nodemon server/server.js\"",
+        "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+        "install": "cd server && npm i && cd ../client && npm i",
+        "seed": "cd server && npm run seed",
+        "build": "cd client && npm run build",
+        "heroku-postbuild": "cd client && npm i && cd ../server && npm run seed && cd ../client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.26.1",
+        "body-parser": "^1.20.0",
+        "concurrently": "^7.1.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.3",
+        "mongoose": "^6.2.11",
+        "morgan": "^1.10.0",
+        "nodemon": "^2.0.15"
+    }
+}

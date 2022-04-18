@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --emerald: #026635;
+  --dark: #141414;
+  --white: #ffff;
+  --jade: #458861;
+}
+
+* {
+  font-family: 'Press Start 2P', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global */
+html {
+  min-height: 100%;
+}
+
+body {
+  /* background-image: url('./assets/banner.png');
+  background-size: cover;
+  display: flex;
+  background-attachment: fixed;
+  background-position: 80%; */
+  background-color: var(--dark);
+}
+
+/* Header */
+.header {
+  overflow: hidden;
+  padding: 10px 10px;
+}
+
+.header a {
+  color: var(--jade);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a {
+  float: left;
+}
+
+.logo {
+  max-width: 250px;
+  float: left;
+}
+
+.header-right {
+  float: right;
+}
+
+nav a:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+
+
+/* Login/Signup */
+.signup-form,
+.login-form {
+  border-radius: 20px;
+  background-color: var(--emerald);
+  padding: 20px;
+  /* opacity: 75%; */
+  font-size: 1rem;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  max-width: 350px;
+
+}
+
+.link {
+  color: #303030;
+}
+
+.link:hover {
+  color: var(--white);
+}
+
+input {
+  margin: auto;
+  border: var(--dark) solid 1px;
+  background-color: var(--white);
+  border-radius: 5px;
+  font-size: .6rem;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 1.5px solid var(--jade);
+}
+
+.error-text {
+  color: #ab3a2b;
+  font-style: italic;
+  font-size: .8rem;
+}
+
+/* About */
+.about-container {
+  color: #fff;
+  line-height: 2rem;
+  font-size: 1rem;
+  margin: auto;
+  display: flex;
+  max-width: 600px;
+  cursor: default;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.about {
+  background-color: var(--emerald);
+  border-radius: 10px;
+  padding: 4% 6%;
+  color: #f5f5f5;
+  /* opacity: 95%; */
+  cursor: default;
+  box-shadow: var(--jade) 4px solid;
+}
+
+.about h1 {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--white);
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--white);
+  }
+}
+
+/* Game  */
+.game-cards {
+  text-align: center;
+  align-items: center;
+  /* width: 75%; */
+  /* max-width: 1500px; */
+  margin: 30px;
+  color: var(--white);
+}
+
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.game-title,
+.turns,
+.footer p {
+  cursor: default;
+}
+
+.game-title,
+.turns,
+.login-title,
+.signup-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  background: linear-gradient(-45deg,
+      var(--jade) 25%,
+      var(--white) 25%,
+      var(--white) 50%,
+      var(--jade) 50%,
+      var(--jade) 75%,
+      var(--white) 75%,
+      var(--white));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 0 0;
+  animation: stripes 1s linear infinite;
+}
+
+/* Hover Button Effect */
+Button {
+  position: relative;
+  padding: 1em 1.8em;
+  outline: none;
+  border: 1px solid #303030;
+  background: #212121;
+  color: var(--emerald);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: .7rem;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  box-shadow: 0 0 10px var(--emerald), 0 0 25px var(--jade), 0 0 50px var(--white);
+  transition-delay: 0.6s;
+}
+
+button span {
+  position: absolute;
+}
+
+button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--white));
+}
+
+button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 0.7s;
+}
+
+button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--jade));
+}
+
+button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 0.7s;
+  transition-delay: 0.35s;
+}
+
+button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, var(--emerald));
+}
+
+button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 0.7s;
+  transition-delay: 0.17s;
+}
+
+button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, var(--jade));
+}
+
+button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 0.7s;
+  transition-delay: 0.52s;
+}
+
+button:active {
+  background: var(--emerald);
+  background: linear-gradient(to top right, var(--emerald), var(--jade));
+  color: #bfbfbf;
+  box-shadow: 0 0 8px var(--emerald), 0 0 8px var(--jade), 0 0 8px var(--emerald);
+  transition: 0.1s;
+}
+
+button:active span:nth-child(1) span:nth-child(2) span:nth-child(2) span:nth-child(2) {
+  transition: none;
+  transition-delay: none;
+}
+
+/* Single Card */
+.card {
+  position: relative;
+  cursor: pointer; 
+  border: 1px solid var(--emerald);
+  border-radius: 15px;
+  background: url("./assets/banner.png") center center no-repeat var(--dark);
+  background-size: cover;
+  color: var(--white);
+  box-shadow: 2px 2px 5px var(--emerald, 0.5);
+  height: 150px;
+}
+
+.card img{
+  width: 100%;
+  display: block;
+  border: .05px solid white;
+  box-shadow: 2px 2px 5px var(--emerald, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card img:hover {
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+/* front of card */
+.card .front {
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s
+}
+
+/* Back of card */
+.card .back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+/* Scoreboard */
+
+/* footer */
+.footer {
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-top: 10px;
+  height: 20px;
+  /* Height of the footer */
+  font-size: 10px;
+  background-color: transparent;
+}
+
+.footer span {
+  justify-content: space-around;
+  padding: 10px 5%;
+}
+
+.icon-link {
+  text-decoration: none;
+  font-size: 40px;
+  color: #458861;
+}
+
+.icon-link:hover {
+  color: var(--emerald);
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark);
+  box-shadow: inset 0 0 5px grey;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--emerald);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--jade);
+}
+
+/* media queries */
+@media (max-width: 767px) {
+  /* header */
+
+  /* game */
+  .game-cards {
+    margin: 15px;
+  }
+
+  .card-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 20px;
+  }
+
+
+  /* login/signup */
+  /* .login-form,
+.signup-form {
+  width: 95%;
+} */
+}
+
+@media screen and (max-width: 500px) {
+  nav a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
